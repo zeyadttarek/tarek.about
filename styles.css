@@ -145,11 +145,11 @@ html{scroll-padding-top:100px}
 /* TESTIMONIALS */
 .testimonials{padding-bottom:4rem;overflow:hidden}
 .marquee{margin-top:2.5rem;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.marquee-track{display:flex;gap:1.2rem;width:max-content;animation:marquee 50s linear infinite}
+.marquee-track{display:flex;gap:1.2rem;width:max-content;animation:marquee 50s linear infinite;will-change:transform}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee blockquote{flex:0 0 340px;background:linear-gradient(180deg,rgba(201,168,76,.08),rgba(201,168,76,.02));border:1px solid rgba(201,168,76,.2);border-radius:var(--radius);padding:1.4rem;font-style:italic;color:var(--cream)}
 .marquee cite{display:block;margin-top:.8rem;font-style:normal;font-size:.85rem;color:var(--gold);letter-spacing:.05em}
-@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes marquee{to{transform:translateX(calc(-50% - .6rem))}}
 
 /* CONTACT FORM */
 .contact-card{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(201,168,76,.2);border-radius:28px;padding:2rem;box-shadow:var(--shadow-gold)}
