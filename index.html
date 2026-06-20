@@ -3,30 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Math Teacher — Portfolio</title>
-<meta name="description" content="Portfolio of a passionate math teacher: qualifications, certificates, teaching experience, and contact." />
+<title>Mr. Tarek Amer — Mathematics Educator</title>
+<meta name="description" content="Portfolio of Mr. Tarek Amer, mathematics educator: Ministerial, American & British curricula, Digital SAT, Calculus, Statistics, and Microeconomics." />
+<meta property="og:title" content="Mr. Tarek Amer — Mathematics Educator" />
+<meta property="og:description" content="Decade+ teaching Ministerial, American, British curricula, Digital SAT, Calculus, Statistics, Microeconomics." />
+<meta property="og:image" content="/assets/tarek.png" />
+<link rel="canonical" href="/portfolio.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<canvas id="math-bg" aria-hidden="true"></canvas>
 
 <!-- NAV -->
 <header class="nav">
   <div class="container nav-inner">
-    <a href="#top" class="brand">Mr. <span>Tarek Amer</span></a>
-    <button class="nav-toggle" type="button" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
+    <a href="#top" class="brand"><span class="brand-mr" data-i18n="brand_mr">Mr.</span> <span class="brand-name">Tarek Amer</span></a>
+
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
     </button>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#qualifications">Qualifications</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact" class="btn btn-primary small">Contact</a>
+
+    <nav class="nav-links" id="site-nav" aria-label="Main navigation" aria-hidden="true">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#certificates" data-i18n="nav_certificates">Certificates</a>
+      <a href="#experience" data-i18n="nav_experience">Experience</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">EN&nbsp;|&nbsp;<span class="ar">ع</span></button>
+      <a href="https://wa.me/971505864080" target="_blank" rel="noopener" class="btn btn-primary small" data-i18n="nav_book">Book Now</a>
     </nav>
   </div>
 </header>
@@ -35,55 +43,82 @@
 <section id="top" class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <span class="eyebrow">Mathematics Educator</span>
-      <h1>Teaching the <em>beauty</em> of mathematics, one student at a time.</h1>
-      <p>Over a decade of experience helping students master algebra, geometry, calculus, and competition math with clarity and confidence.</p>
+      <span class="eyebrow" data-i18n="hero_eyebrow">Mathematics Educator</span>
+      <h1 class="hero-title">
+        <span class="line" data-i18n="hero_l1">Teaching the</span>
+        <span class="line"><em data-i18n="hero_l2">beauty</em> <span data-i18n="hero_l3">of mathematics,</span></span>
+        <span class="line" data-i18n="hero_l4">one student at a time.</span>
+      </h1>
+      <p class="lead" data-i18n="hero_sub">Over a decadehelping students master Algebra, Geometry, Calculus, Statistics and Microeconomics — with clarity, structure, and confidence.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Get in touch →</a>
-        <a href="#certificates" class="btn btn-ghost">View certificates</a>
+        <a href="#contact" class="btn btn-primary shimmer" data-i18n="hero_cta1">Get in touch →</a>
+        <a href="#certificates" class="btn btn-ghost" data-i18n="hero_cta2">View certificates</a>
       </div>
+      <ul class="hero-tags">
+        <li data-i18n="tag_ministerial">Ministerial</li>
+        <li data-i18n="tag_american">American</li>
+        <li data-i18n="tag_british">British</li>
+        <li data-i18n="tag_sat">Digital SAT</li>
+      </ul>
     </div>
     <div class="hero-portrait">
-      <img src="tarek.png" alt="Portrait of the math teacher" />
+      <div class="portrait-frame">
+        <div class="ring"></div>
+        <img src="tarek.png" alt="Mr. Tarek Amer" />
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><span class="num" data-target="15">0</span><span data-i18n="stat_years">Years teaching</span></div>
+    <div class="stat reveal"><span class="num" data-target="2000" data-suffix="+">0</span><span data-i18n="stat_students">Students mentored</span></div>
+    <div class="stat reveal"><span class="num" data-target="3">0</span><span data-i18n="stat_curricula">Curricula taught</span></div>
+    <div class="stat reveal"><span class="num" data-target="98" data-suffix="%">0</span><span data-i18n="stat_success">Exam success rate</span></div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
-  <div class="container narrow">
-    <p class="eyebrow center">About</p>
-    <h2 class="center">A passion for teaching mathematics</h2>
-    <p class="lead">I believe every student can succeed in mathematics with the right guidance. My approach blends rigorous problem-solving with intuitive explanations — turning frustration into curiosity, and confusion into confidence.</p>
-    <div class="stats">
-      <div class="stat"><strong>15+</strong><span>Years teaching</span></div>
-      <div class="stat"><strong>500+</strong><span>Students mentored</span></div>
-      <div class="stat"><strong>5+</strong><span>Competition awards</span></div>
-      <div class="stat"><strong>98%</strong><span>Pass rate</span></div>
-    </div>
+  <div class="container narrow center-block">
+    <p class="eyebrow" data-i18n="about_eyebrow">About</p>
+    <h2 data-i18n="about_title">A passion for teaching mathematics</h2>
+    <p class="lead" data-i18n="about_p1">I'm Tarek Amer — a math educator who believes every student can love math when it's taught with patience, precision, and the right method. I teach the Ministerial, American, and British curricula in English, with modern online tools and proven strategies.</p>
+    <p data-i18n="about_p2">From foundational reviews for grades 8–12 to full Digital SAT preparation and university-level Calculus, Statistics, and Microeconomics — every session is designed around clarity and confidence.</p>
   </div>
 </section>
 
-<!-- QUALIFICATIONS -->
-<section id="qualifications" class="section alt">
+<!-- SERVICES BENTO -->
+<section id="services" class="section section-dark">
   <div class="container">
-    <p class="eyebrow center">Qualifications</p>
-    <h2 class="center">Academic background</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="icon">🎓</div>
-        <h3>Mathematics Master & Personal Adviser</h3>
-        <p>Over 15 years of academic excellence and student mentorship.</p>
+    <p class="eyebrow center" data-i18n="services_eyebrow">What I teach</p>
+    <h2 class="center" data-i18n="services_title">Curricula & Courses</h2>
+    <div class="bento">
+      <article class="card tilt large reveal">
+        <h3 data-i18n="srv1_t">School Curricula</h3>
+        <p data-i18n="srv1_d">Ministerial, American, and British math — grades 8 to 12. Lessons in English, reinforced with worked examples.</p>
       </article>
-      <article class="card">
-        <div class="icon">📐</div>
-        <h3>Expert in Advanced Mathematics</h3>
-        <p>Strong foundation across all branches of mathematics.</p>
+      <article class="card tilt reveal">
+        <h3 data-i18n="srv2_t">Digital SAT</h3>
+        <p data-i18n="srv2_d">Complete preparation for the Digital SAT Math section with timed drills and strategy.</p>
       </article>
-      <article class="card">
-        <div class="icon">📘</div>
-        <h3>Teaching Certification</h3>
-        <p>Licensed secondary mathematics teacher.</p>
+      <article class="card tilt reveal">
+        <h3 data-i18n="srv3_t">Calculus</h3>
+        <p data-i18n="srv3_d">University Calculus I & II — limits, derivatives, integrals, series.</p>
+      </article>
+      <article class="card tilt reveal">
+        <h3 data-i18n="srv4_t">Statistics</h3>
+        <p data-i18n="srv4_d">Descriptive & inferential statistics for SAT and university courses.</p>
+      </article>
+      <article class="card tilt reveal">
+        <h3 data-i18n="srv5_t">Microeconomics</h3>
+        <p data-i18n="srv5_d">Clear, math-first explanations of microeconomic theory and graphs.</p>
+      </article>
+      <article class="card tilt reveal accent">
+        <h3 data-i18n="srv6_t">Group Discounts</h3>
+        <p data-i18n="srv6_d">Reduced rates for small study groups — same quality, shared cost.</p>
       </article>
     </div>
   </div>
@@ -92,76 +127,92 @@
 <!-- CERTIFICATES -->
 <section id="certificates" class="section">
   <div class="container">
-    <p class="eyebrow center">Certificates</p>
-    <h2 class="center">Awards & recognitions</h2>
+    <p class="eyebrow center" data-i18n="cert_eyebrow">Credentials</p>
+    <h2 class="center" data-i18n="cert_title">Certificates</h2>
     <div class="gallery">
-      <figure>
-        <img src="2cer.jpg" alt="Certificate of excellence in mathematics teaching" />
-        <figcaption>Excellence in Teaching</figcaption>
-        <p class="cert-info">It showcases excellent communication and psychological skills, helping the teacher understand student behavior and adapt teaching styles to various learning minds.</p>
-      </figure>
-      <figure>
-        <img src="1cer.jpg" alt="Advanced mathematics certification" />
-        <figcaption>Advanced Mathematics</figcaption>
-        <p class="cert-info">It proves the teacher's advanced capability to deliver information professionally, design structured math lessons, and employ modern educational methodologies.</p>
-      </figure>
-      <figure>
-        <img src="4cer.jpg" alt="Mathematics olympiad coach certificate" />
-        <figcaption>Great Advisor</figcaption>
-        <p class="cert-info">It highlights the teacher's skills in academic mentoring and personal guiding, allowing them to support students individually and overcome math anxiety.</p>
-      </figure>
+      <figure class="reveal"><img src="1cer.jpg" alt="Columbia Southern University — Training of Trainers (T.O.T) 2009" loading="lazy" /><figcaption data-i18n="cert1">Columbia Southern University — T.O.T (2009)</figcaption></figure>
+      <figure class="reveal"><img src="2cer.jpg" alt="INLPTA Diploma — Neuro Linguistic Programming 2008" loading="lazy" /><figcaption data-i18n="cert2">INLPTA — NLP Diploma (2008)</figcaption></figure>
+      <figure class="reveal"><img src="4cer.jpg" alt="Arabian Global Academy — Approved Personal Adviser 2010" loading="lazy" /><figcaption data-i18n="cert3">Arabian Global Academy — Personal Adviser (2010)</figcaption></figure>
     </div>
+    <p class="hint center" data-i18n="cert_hint">Click any certificate to enlarge.</p>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section alt">
+<section id="experience" class="section section-dark">
   <div class="container narrow">
-    <p class="eyebrow center">Experience</p>
-    <h2 class="center">Teaching experience</h2>
+    <p class="eyebrow center" data-i18n="exp_eyebrow">Experience</p>
+    <h2 class="center" data-i18n="exp_title">A journey in teaching</h2>
     <ol class="timeline">
-      <li><h3>Senior Mathematics Teacher</h3><span>2018 — 2026</span><p>Leading advanced math courses and competition prep for high-school students.</p></li>
-      <li><h3>Private Tutor — Calculus & Algebra</h3><span>2015 — 2026</span><p>One-on-one coaching for university entrance and AP exams.</p></li>
-      <li><h3>Mathematics Instructor</h3><span>2012 — 2026</span><p>Classroom teaching across grades 5–12 in public school.</p></li>
+      <li class="reveal"><h3 data-i18n="exp1_t">University Lecturer</h3><p data-i18n="exp1_d">Teaching Calculus, Statistics, and Microeconomics to undergraduates across multiple universities.</p></li>
+      <li class="reveal"><h3 data-i18n="exp2_t">SAT & International Curricula Specialist</h3><p data-i18n="exp2_d">Preparing students for the Digital SAT and supporting American & British math curricula.</p></li>
+      <li class="reveal"><h3 data-i18n="exp3_t">Certified Trainer (T.O.T)</h3><p data-i18n="exp3_d">Columbia Southern University — Training of Trainers, plus INLPTA NLP Diploma.</p></li>
+      <li class="reveal"><h3 data-i18n="exp4_t">Online Teaching Innovator</h3><p data-i18n="exp4_d">Pioneering modern online teaching strategies with the best tools and methods.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- YOUTUBE -->
-<section class="section">
-  <div class="container narrow center-block">
-    <p class="eyebrow center">Learn online</p>
-    <h2 class="center">Free lessons on YouTube</h2>
-    <p class="center">Hundreds of free video lessons covering every topic from arithmetic to calculus.</p>
-    <a href="http://www.youtube.com/@tarekamer4015" target="_blank" rel="noopener" class="btn btn-primary">▶ Visit my YouTube channel</a>
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+  <div class="container">
+    <p class="eyebrow center" data-i18n="test_eyebrow">Student voices</p>
+    <h2 class="center" data-i18n="test_title">What students say</h2>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <blockquote>"Mr. Tarek made Calculus finally click for me." <cite>— Layla, Univ. student</cite></blockquote>
+      <blockquote>"I jumped 180 points on Digital SAT Math." <cite>— Omar, G12</cite></blockquote>
+      <blockquote>"Patient, clear, and incredibly organized." <cite>— Sara, G10</cite></blockquote>
+      <blockquote>"Best math teacher I have ever had." <cite>— Yousef, G11</cite></blockquote>
+      <blockquote>"Statistics felt easy after one month." <cite>— Mariam, Univ.</cite></blockquote>
+      <blockquote>"He genuinely cares about every student." <cite>— Parent</cite></blockquote>
+      <!-- duplicate for seamless loop -->
+      <blockquote>"Mr. Tarek made Calculus finally click for me." <cite>— Layla, Univ. student</cite></blockquote>
+      <blockquote>"I jumped 180 points on Digital SAT Math." <cite>— Omar, G12</cite></blockquote>
+      <blockquote>"Patient, clear, and incredibly organized." <cite>— Sara, G10</cite></blockquote>
+      <blockquote>"Best math teacher I have ever had." <cite>— Yousef, G11</cite></blockquote>
+      <blockquote>"Statistics felt easy after one month." <cite>— Mariam, Univ.</cite></blockquote>
+      <blockquote>"He genuinely cares about every student." <cite>— Parent</cite></blockquote>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section alt">
-  <div class="container narrow">
-    <p class="eyebrow center">Contact</p>
-    <h2 class="center">Let's work together</h2>
-    <p class="center lead">Reach out by email or message me directly on Telegram or WhatsApp.</p>
-    <div class="contact-grid">
-      <a class="contact-card" href="mailto:tarekaa2009@hotmail.com" target="_blank" rel="noopener">
-        <span class="ic">✉</span><strong>Email</strong><span>tarekaa2009@hotmail.com</span>
+<section id="contact" class="section">
+  <div class="container contact-card">
+    <div class="contact-content">
+      <p class="eyebrow" data-i18n="contact_eyebrow">Contact</p>
+      <h2 data-i18n="contact_title">Let's start your journey</h2>
+      <p class="lead" data-i18n="contact_sub">Reach out for inquiries or to book your first session.</p>
+      <a href="https://wa.me/971505864080" target="_blank" rel="noopener" class="btn btn-whatsapp shimmer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.298-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.521.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        <span data-i18n="contact_wa">WhatsApp: 0505864080</span>
       </a>
-      <a class="contact-card" href="https://t.me/TarekAmer_Math" target="_blank" rel="noopener">
-        <span class="ic">✈</span><strong>Telegram</strong><span>@TarekAmer_Math</span>
-      </a>
-      <a class="contact-card" href="https://wa.me/971505864080" target="_blank" rel="noopener">
-        <span class="ic">💬</span><strong>WhatsApp</strong><span>+971 50 586 4080</span>
-      </a>
+      <p class="hint" data-i18n="contact_or">— or send a quick message —</p>
+      <form class="contact-form" id="contact-form" action="mailto:tarek@example.com" method="post" enctype="text/plain">
+        <label><span data-i18n="form_name">Your name</span><input type="text" name="name" required></label>
+        <label><span data-i18n="form_email">Email or phone</span><input type="text" name="contact" required></label>
+        <label><span data-i18n="form_msg">Message</span><textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="btn btn-primary shimmer" data-i18n="form_send">Send message</button>
+      </form>
+    </div>
+    <div class="contact-image-wrap">
+      <img src="pic.jpeg" alt="Mr. Tarek Amer in a professional setting" class="contact-image" />
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="container">
-    <p>© <span id="year"></span> Mr. Tarek Amer — All rights reserved.</p>
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Mr. Tarek Amer · <span data-i18n="footer_tag">Mathematics Educator</span></p>
   </div>
 </footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img alt="" />
+</div>
 
 <script src="script.js"></script>
 </body>
