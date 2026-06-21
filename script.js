@@ -4,6 +4,38 @@
   const yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
 
+  const testimonials = {
+    en: [
+      { quote: '“Mr. Tarek made Calculus finally click for me.”', author: '— Layla, Univ. student' },
+      { quote: '“I jumped 180 points on Digital SAT Math.”', author: '— Omar, G12' },
+      { quote: '“Patient, clear, and incredibly organized.”', author: '— Sara, G10' },
+      { quote: '“Best math teacher I have ever had.”', author: '— Yousef, G11' },
+      { quote: '“Statistics felt easy after one month.”', author: '— Mariam, Univ.' },
+      { quote: '“He genuinely cares about every student.”', author: '— Parent' }
+    ],
+    ar: [
+      { quote: '“أصبح التفاضل عندي واضحًا بفضل الأستاذ طارق.”', author: '— ليلى، طالبة جامعية' },
+      { quote: '“ارتفعت درجاتي في اختبار Digital SAT Math بمقدار 180 نقطة.”', author: '— عمر، الصف الثاني عشر' },
+      { quote: '“صبور وواضح ومنظم جدًا.”', author: '— سارة، الصف العاشر' },
+      { quote: '“أفضل معلم رياضيات مررت به.”', author: '— يوسف، الصف الحادي عشر' },
+      { quote: '“أصبحت الإحصاء سهلة بعد شهر واحد.”', author: '— مريم، جامعة' },
+      { quote: '“يهتم حقًا بكل طالب على حدة.”', author: '— ولي الأمر' }
+    ]
+  };
+
+  function renderTestimonials(lang) {
+    const track = document.getElementById('marquee-track');
+    if (!track) return;
+    const items = [...(testimonials[lang] || testimonials.en), ...(testimonials[lang] || testimonials.en)];
+    track.innerHTML = items.map((item) => `
+      <blockquote>
+        <span class="quote-text">${item.quote}</span>
+        <cite>${item.author}</cite>
+      </blockquote>
+    `).join('');
+    track.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  }
+
   // ---------- i18n ----------
   const translations = {
     en: {
@@ -94,9 +126,11 @@
   }
   const savedLang = (() => { try { return localStorage.getItem('lang'); } catch(e){ return null; } })() || 'en';
   applyLang(savedLang);
+  renderTestimonials(savedLang);
   document.getElementById('lang-toggle')?.addEventListener('click', () => {
     const next = document.documentElement.lang === 'ar' ? 'en' : 'ar';
     applyLang(next);
+    renderTestimonials(next);
   });
 
   // ---------- Mobile nav ----------
